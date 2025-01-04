@@ -19,7 +19,7 @@ def train_bilstm_model(x_train, x_test, y_train, y_test, model_filename='lstm.ke
     y_train = np.array(y_train)
     y_test  = np.array(y_test)
 
-    # Reshape data for LSTM: (samples, timesteps, features)
+    # Reshape data for BiLSTM: (samples, timesteps, features)
     num_features = x_train.shape[1]  # Number of features (length of ECFP vector)
     x_train = x_train.reshape((x_train.shape[0], 1, num_features))
     x_test = x_test.reshape((x_test.shape[0], 1, num_features))

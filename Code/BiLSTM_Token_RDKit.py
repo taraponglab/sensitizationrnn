@@ -11,7 +11,7 @@ from sklearn.metrics import matthews_corrcoef
 from sklearn.metrics import roc_curve, auc
 from sklearn.metrics import classification_report, roc_auc_score, f1_score, precision_score, balanced_accuracy_score
 
-def train_lstm_model(x_train, x_test, y_train, y_test, model_filename='bilstm_token_rdkit.keras', plot_filename='bilstm_token_rdkit.png', epochs=50, batch_size=2):
+def train_bilstm_model(x_train, x_test, y_train, y_test, model_filename='bilstm_token_rdkit.keras', plot_filename='bilstm_token_rdkit.png', epochs=50, batch_size=2):
 
     #convert data to numpy
     x_train = np.array(x_train)
@@ -19,18 +19,14 @@ def train_lstm_model(x_train, x_test, y_train, y_test, model_filename='bilstm_to
     y_train = np.array(y_train)
     y_test  = np.array(y_test)
 
-    # Reshape data for LSTM: (samples, timesteps, features)
+    # Reshape data for BiLSTM: (samples, timesteps, features)
     num_features = x_train.shape[1]  # Number of features (length of ECFP vector)
     x_train = x_train.reshape((x_train.shape[0], 1, num_features))
     x_test = x_test.reshape((x_test.shape[0], 1, num_features))
 
-    # Split data into training and test sets
-    #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    
 
-    # Check the shapes of the datasets
-    #print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
-
-    # Build LSTM model
+    # Build BiLSTM model
     model = Sequential()
     model.add(Bidirectional(LSTM(units=64, input_shape=(1, num_features), return_sequences=True)))
     model.add(Bidirectional(LSTM(32, return_sequences=True)))
@@ -81,7 +77,7 @@ def main():
     x_test = pd.read_csv("sensitization_natural_database_token_rdkit.csv",index_col=0)
     y_train = pd.read_csv("sensitization_y_train_tox_numeric.csv",index_col=0)
     y_test = pd.read_csv("sensitization_natural_database_y_test.csv",index_col=0)
-    y_test_pred_prob,accuracy_train, accuracy_test,mcc_train,mcc_test,precision_train,precision_test,recall_train,recall_test, specificity_train,specificity_test, roc_auc_test,roc_auc_train, model_file, plot_file = train_lstm_model(x_train, x_test, y_train, y_test)
+    y_test_pred_prob,accuracy_train, accuracy_test,mcc_train,mcc_test,precision_train,precision_test,recall_train,recall_test, specificity_train,specificity_test, roc_auc_test,roc_auc_train, model_file, plot_file = train_bilstm_model(x_train, x_test, y_train, y_test)
     # print pred probalibility
     y_test_pred_prob = pd.DataFrame(y_test_pred_prob, columns=['Prediction'], index= y_test.index).to_csv("sensitization_natural_pred_prob_test_0712.csv")
     

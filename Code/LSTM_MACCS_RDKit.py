@@ -24,11 +24,7 @@ def train_lstm_model(x_train, x_test, y_train, y_test, model_filename='lstm.kera
     x_train = x_train.reshape((x_train.shape[0], 1, num_features))
     x_test = x_test.reshape((x_test.shape[0], 1, num_features))
 
-    # Split data into training and test sets
-    #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-    # Check the shapes of the datasets
-    #print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+    
 
     # Build LSTM model
     model = Sequential()

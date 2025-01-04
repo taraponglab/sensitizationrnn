@@ -4,7 +4,10 @@
 
 #### Huynh Anh Duy*, Tarapong Srisongkram** 
 
-*Graduate School in the Program of Research and Development in Pharmaceuticals, Pharmaceutical Sciences, Faculty of Pharmaceutical Sciences, Khon Kaen University, Thailand. (huynhanhduy.h@kkumail.com; haduy@ctu.edu.vn)
+*Graduate School in the Program of Research and Development in Pharmaceuticals, Pharmaceutical Sciences, Faculty of Pharmaceutical Sciences, Khon Kaen University, Thailand; 
+
+Department of Health Sciences, College of Natural Sciecnes, Can Tho University, Vietnam. (huynhanhduy.h@kkumail.com; haduy@ctu.edu.vn)
+
 
 **Division of Pharmaceutical Chemistry, Faculty of Pharmaceutical Sciences, Khon Kaen University, Thailand. (tarasri@kku.ac.th)
 

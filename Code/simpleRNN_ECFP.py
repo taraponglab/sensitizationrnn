@@ -11,7 +11,7 @@ from sklearn.metrics import matthews_corrcoef
 from sklearn.metrics import roc_curve, auc
 from sklearn.metrics import classification_report, roc_auc_score, f1_score, precision_score, balanced_accuracy_score
 
-def train_simpleRNN_model(x_train, x_test, y_train, y_test, model_filename='lstm.keras', plot_filename='training_lost.png', epochs=50, batch_size=2):
+def train_simpleRNN_model(x_train, x_test, y_train, y_test, model_filename='rnn.keras', plot_filename='training_lost.png', epochs=50, batch_size=2):
 
     #convert data to numpy
     x_train = np.array(x_train)
@@ -19,16 +19,12 @@ def train_simpleRNN_model(x_train, x_test, y_train, y_test, model_filename='lstm
     y_train = np.array(y_train)
     y_test  = np.array(y_test)
 
-    # Reshape data for LSTM: (samples, timesteps, features)
+    # Reshape data for RNN: (samples, timesteps, features)
     num_features = x_train.shape[1]  # Number of features (length of ECFP vector)
     x_train = x_train.reshape((x_train.shape[0], 1, num_features))
     x_test = x_test.reshape((x_test.shape[0], 1, num_features))
 
-    # Split data into training and test sets
-    #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-    # Check the shapes of the datasets
-    #print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+    
 
     # Build SimpleRNN model
     model = Sequential()

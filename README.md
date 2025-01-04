@@ -8,7 +8,6 @@
 
 **Division of Pharmaceutical Chemistry, Faculty of Pharmaceutical Sciences, Khon Kaen University, Thailand. (tarasri@kku.ac.th)
 
-Read full paper published in **Journal of Chemical Information and Modeling**.
 
 #### MIT License
 

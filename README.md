@@ -11,6 +11,8 @@ Department of Health Sciences, College of Natural Sciences, Can Tho University, 
 
 **Division of Pharmaceutical Chemistry, Faculty of Pharmaceutical Sciences, Khon Kaen University, Thailand. (tarasri@kku.ac.th)
 
+Full paper published in **Journal of Chemical Information and Modeling (Published by American Chemical Society)**.
+
 
 #### MIT License
 

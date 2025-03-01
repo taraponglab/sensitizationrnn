@@ -1,4 +1,4 @@
- # Bidirectional Long Short-Term Memory (BiLSTM) Neural Networks with Conjoint Fingerprints for Predicting Skin-Sensitizing Agents in Natural Compounds
+ # Bidirectional Long Short-Term Memory (BiLSTM) Neural Networks with Conjoint Fingerprints: Application in Predicting Skin-Sensitizing Agents in Natural Compounds
 
 ![Abstract Graphic](graphic_abstract.png)
 

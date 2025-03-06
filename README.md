@@ -13,6 +13,7 @@ Department of Health Sciences, College of Natural Sciences, Can Tho University, 
 
 The full paper has been published in the **Journal of Chemical Information and Modeling**, a journal of the **American Chemical Society**.
 
+The article is available free of charge at: https://pubs.acs.org/doi/10.1021/acs.jcim.5c00032
 
 #### MIT License
 
